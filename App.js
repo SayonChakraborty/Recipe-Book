@@ -4,6 +4,7 @@ import './App.css';
 
 import Axios from "axios";
 import { useState } from "react";
+import Recipefile from './Recipefile';
 
 
 
@@ -42,9 +43,9 @@ function App() {
         />
         <input className='app_submit'  type= "submit" value ="Search"/>
       </form>
-      <div>
+      <div className='app_recipe'>
         {recipes.map((recipe) =>{
-          return <p>{recipe["recipe"] ["label"]}</p>
+          return <Recipefile recipe ={recipe}/>
         })}
       </div>
 
